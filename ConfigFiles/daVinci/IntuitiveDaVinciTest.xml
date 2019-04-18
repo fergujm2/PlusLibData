@@ -16,7 +16,7 @@
         <DataSource Type="Tool" Id="ISI_EYE_FRAME" PortName="ISI_EYE_FRAME"/>
       </DataSources>
       <OutputChannels>
-        <OutputChannel Id="TrackerStream" >		  
+        <OutputChannel Id="TrackerStream" >
           <DataSource  Id="ISI_PSM1_TIP" />
           <DataSource  Id="ISI_PSM2_TIP" />
           <DataSource  Id="ISI_EYE_FRAME" />
