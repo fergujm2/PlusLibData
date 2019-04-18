@@ -6,7 +6,7 @@
     />
     <Device
       Id="TrackerDevice"
-      Type="IntuitiveDaVinciTest" 
+      Type="FakeIntuitiveDaVinci" 
       ToolReferenceFrame="ISI_ECM_TIP"
 	  IpAddr="10.0.0.5"
 	  Password="">
