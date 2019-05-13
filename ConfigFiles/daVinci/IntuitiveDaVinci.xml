@@ -1,12 +1,12 @@
 <PlusConfiguration version="2.1">
   <DataCollection StartupDelaySec="1.0">
     <DeviceSet 
-      Name="PlusServer: Fake da Vinci Test" 
+      Name="PlusServer: Tracking the da Vinci robot using OpenIGTLink and the da Vinci API" 
       Description="Test broadcasting tool tracking data through TCP/IP connection and ISI API."
     />
     <Device
       Id="TrackerDevice"
-      Type="FakeIntuitiveDaVinci" 
+      Type="IntuitiveDaVinci" 
       ToolReferenceFrame="Base"
 	  AcquisitionRate="60"
 	  Password="">
