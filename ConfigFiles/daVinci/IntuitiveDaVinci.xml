@@ -8,36 +8,32 @@
       Id="TrackerDevice"
       Type="IntuitiveDaVinci" 
       ToolReferenceFrame="Base"
-    AcquisitionRate="60"
-    
-    Psm2DhTable = "
-      1.0   0.0     SHP   CHP   0.0       SHP   CHP
-      1.0   0.0     SNHP  CNHP  0.0       SNHP  CNHP
-      2.0   0.0     SHP   CHP   -479.313  SZ    CZ
-      1.0   0.0     SZ    CZ    467.000   SZ    CZ
-      1.0   0.0     SNHP  CNHP  0.0       SNHP  CNHP
-      1.0   8.9916  SNHP  CNHP  0.0       SNHP  CNHP
-      0.0   0.0     SNHP  CNHP  9.652     SZ    CZ"
-    
-    Psm2DhTable = "
-      1.0   0.0     SHP   CHP   0.0       SHP   CHP
-      1.0   0.0     SNHP  CNHP  0.0       SNHP  CNHP
-      2.0   0.0     SHP   CHP   -479.313  SZ    CZ
-      1.0   0.0     SZ    CZ    467.000   SZ    CZ
-      1.0   0.0     SNHP  CNHP  0.0       SNHP  CNHP
-      1.0   8.9916  SNHP  CNHP  0.0       SNHP  CNHP
-      0.0   0.0     SNHP  CNHP  9.652     SZ    CZ"
-    
-    EcmDhTable = "
-      1.0   0.0     SHP   CHP   0.0       SHP   CHP
-      1.0   0.0     SNHP  CNHP  0.0       SNHP  CNHP
-      2.0   0.0     SHP   CHP   -382.2    SZ    CZ
-      1.0   0.0     SZ    CZ    382.9     SP    CP
-      0.0   0.0     SNHP  CNHP  0.0       SNHP  CNHP
-      0.0   0.0     SNHP  CNHP  0.0       SNHP  CNHP
-      0.0   0.0     SNHP  CNHP  0.0       SZ    CZ"
-    
-    Password="">
+      AcquisitionRate="1"
+      Psm1DhTable="
+        1.0   0.0     1.0   0.0   0.0       1.0   0.0 
+        1.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
+        2.0   0.0     1.0   0.0   -479.313  0.0    1.0
+        1.0   0.0     0.0    1.0    467.000   0.0    1.0
+        1.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
+        1.0   8.9916  -1.0  0.0  0.0       -1.0  0.0 
+        0.0   0.0     -1.0  0.0  9.652     0.0    1.0"
+      Psm2DhTable="
+        1.0   0.0     1.0   0.0   0.0       1.0   0.0 
+        1.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
+        2.0   0.0     1.0   0.0   -479.313  0.0    1.0
+        1.0   0.0     0.0    1.0    467.000   0.0    1.0
+        1.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
+        1.0   8.9916  -1.0  0.0  0.0       -1.0  0.0 
+        0.0   0.0     -1.0  0.0  9.652     0.0    1.0"
+      EcmDhTable="
+        1.0   0.0     1.0   0.0   0.0       1.0   0.0 
+        1.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
+        2.0   0.0     1.0   0.0   -382.2    0.0    1.0
+        1.0   0.0     0.0    1.0    382.9     0.0    1.0
+        0.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
+        0.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
+        0.0   0.0     -1.0  0.0  0.0       0.0    1.0"
+      Password="">
       <DataSources>
         <DataSource Type="Tool" Id="PSM1Tip" PortName="PSM1Tip"/>
         <DataSource Type="Tool" Id="PSM2Tip" PortName="PSM2Tip"/>
@@ -61,13 +57,13 @@
     </Device>    
   </DataCollection>
   
-    <PlusOpenIGTLinkServer
-        MaxNumberOfIgtlMessagesToSend="10"
-        MaxTimeSpentWithProcessingMs="50"
-        ListeningPort="18944"
-        SendValidTransformsOnly="true"
-        OutputChannelId="TrackerStream" >
-        <DefaultClientInfo>
+  <PlusOpenIGTLinkServer
+    MaxNumberOfIgtlMessagesToSend="10"
+    MaxTimeSpentWithProcessingMs="50"
+    ListeningPort="18944"
+    SendValidTransformsOnly="true"
+    OutputChannelId="TrackerStream" >
+    <DefaultClientInfo>
       <MessageTypes>
         <Message Type="TRANSFORM" />
       </MessageTypes>
@@ -75,7 +71,6 @@
         <Transform Name="PSM1TipToBase" />
         <Transform Name="PSM2TipToBase" />
       </TransformNames>
-        </DefaultClientInfo>
-    </PlusOpenIGTLinkServer>
-
+    </DefaultClientInfo>
+  </PlusOpenIGTLinkServer>
 </PlusConfiguration>
