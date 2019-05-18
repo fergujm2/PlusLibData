@@ -7,7 +7,7 @@
     <Device
       Id="TrackerDevice"
       Type="IntuitiveDaVinci"
-      ToolReferenceFrame=""
+      ToolReferenceFrame="Ref"
       AcquisitionRate="100"
       Psm1DhTable="
         1.0   0.0     1.0   0.0   0.0       1.0   0.0 
@@ -36,64 +36,64 @@
       Password="">
       
       <DataSources>
-        <DataSource Type="Tool" Id="psm1BaseToWorld" PortName="psm1BaseToWorld"/>
-        <DataSource Type="Tool" Id="psm2BaseToWorld" PortName="psm2BaseToWorld"/>
-        <DataSource Type="Tool" Id="ecmBaseToWorld" PortName="ecmBaseToWorld"/>
+        <DataSource Type="Tool" Id="psm1Base" PortName="psm1Base"/>
+        <DataSource Type="Tool" Id="psm2Base" PortName="psm2Base"/>
+        <DataSource Type="Tool" Id="ecmBase" PortName="ecmBase"/>
         
-        <DataSource Type="Tool" Id="psm1Frame1ToBase" PortName="psm1Frame1ToBase"/>
-        <DataSource Type="Tool" Id="psm1Frame2ToBase" PortName="psm1Frame2ToBase"/>
-        <DataSource Type="Tool" Id="psm1Frame3ToBase" PortName="psm1Frame3ToBase"/>
-        <DataSource Type="Tool" Id="psm1Frame4ToBase" PortName="psm1Frame4ToBase"/>
-        <DataSource Type="Tool" Id="psm1Frame5ToBase" PortName="psm1Frame5ToBase"/>
-        <DataSource Type="Tool" Id="psm1Frame6ToBase" PortName="psm1Frame6ToBase"/>
-        <DataSource Type="Tool" Id="psm1Frame7ToBase" PortName="psm1Frame7ToBase"/>
+        <DataSource Type="Tool" Id="psm1Frame1" PortName="psm1Frame1"/>
+        <DataSource Type="Tool" Id="psm1Frame2" PortName="psm1Frame2"/>
+        <DataSource Type="Tool" Id="psm1Frame3" PortName="psm1Frame3"/>
+        <DataSource Type="Tool" Id="psm1Frame4" PortName="psm1Frame4"/>
+        <DataSource Type="Tool" Id="psm1Frame5" PortName="psm1Frame5"/>
+        <DataSource Type="Tool" Id="psm1Frame6" PortName="psm1Frame6"/>
+        <DataSource Type="Tool" Id="psm1Frame7" PortName="psm1Frame7"/>
         
-        <DataSource Type="Tool" Id="psm2Frame1ToBase" PortName="psm2Frame1ToBase"/>
-        <DataSource Type="Tool" Id="psm2Frame2ToBase" PortName="psm2Frame2ToBase"/>
-        <DataSource Type="Tool" Id="psm2Frame3ToBase" PortName="psm2Frame3ToBase"/>
-        <DataSource Type="Tool" Id="psm2Frame4ToBase" PortName="psm2Frame4ToBase"/>
-        <DataSource Type="Tool" Id="psm2Frame5ToBase" PortName="psm2Frame5ToBase"/>
-        <DataSource Type="Tool" Id="psm2Frame6ToBase" PortName="psm2Frame6ToBase"/>
-        <DataSource Type="Tool" Id="psm2Frame7ToBase" PortName="psm2Frame7ToBase"/>
+        <!--<DataSource Type="Tool" Id="psm2Frame1ToBase" PortName="psm2Frame1ToBase"/>
+        <DataSource Type="Tool" Id="psm2Frame2" PortName="psm2Frame2"/>
+        <DataSource Type="Tool" Id="psm2Frame3" PortName="psm2Frame3"/>
+        <DataSource Type="Tool" Id="psm2Frame4" PortName="psm2Frame4"/>
+        <DataSource Type="Tool" Id="psm2Frame5" PortName="psm2Frame5"/>
+        <DataSource Type="Tool" Id="psm2Frame6" PortName="psm2Frame6"/>
+        <DataSource Type="Tool" Id="psm2Frame7" PortName="psm2Frame7"/>
         
-        <DataSource Type="Tool" Id="ecmFrame1ToBase" PortName="ecmFrame1ToBase"/>
-        <DataSource Type="Tool" Id="ecmFrame2ToBase" PortName="ecmFrame2ToBase"/>
-        <DataSource Type="Tool" Id="ecmFrame3ToBase" PortName="ecmFrame3ToBase"/>
-        <DataSource Type="Tool" Id="ecmFrame4ToBase" PortName="ecmFrame4ToBase"/>
-        <DataSource Type="Tool" Id="ecmFrame5ToBase" PortName="ecmFrame5ToBase"/>
-        <DataSource Type="Tool" Id="ecmFrame6ToBase" PortName="ecmFrame6ToBase"/>
-        <DataSource Type="Tool" Id="ecmFrame7ToBase" PortName="ecmFrame7ToBase"/>
+        <DataSource Type="Tool" Id="ecmFrame1" PortName="ecmFrame1"/>
+        <DataSource Type="Tool" Id="ecmFrame2" PortName="ecmFrame2"/>
+        <DataSource Type="Tool" Id="ecmFrame3" PortName="ecmFrame3"/>
+        <DataSource Type="Tool" Id="ecmFrame4" PortName="ecmFrame4"/>
+        <DataSource Type="Tool" Id="ecmFrame5" PortName="ecmFrame5"/>
+        <DataSource Type="Tool" Id="ecmFrame6" PortName="ecmFrame6"/>
+        <DataSource Type="Tool" Id="ecmFrame7" PortName="ecmFrame7"/>-->
       </DataSources>
       
       <OutputChannels>
         <OutputChannel Id="TrackerStream" >
-          <DataSource  Id="psm1BaseToWorld" />
-          <DataSource  Id="psm2BaseToWorld" />
-          <DataSource  Id="ecmBaseToWorld" />
+          <DataSource  Id="psm1Base" />
+          <DataSource  Id="psm2Base" />
+          <DataSource  Id="ecmBase" />
           
-          <DataSource  Id="psm1Frame1ToBase" />
-          <DataSource  Id="psm1Frame2ToBase" />
-          <DataSource  Id="psm1Frame3ToBase" />
-          <DataSource  Id="psm1Frame4ToBase" />
-          <DataSource  Id="psm1Frame5ToBase" />
-          <DataSource  Id="psm1Frame6ToBase" />
-          <DataSource  Id="psm1Frame7ToBase" />
+          <DataSource  Id="psm1Frame1" />
+          <DataSource  Id="psm1Frame2" />
+          <DataSource  Id="psm1Frame3" />
+          <DataSource  Id="psm1Frame4" />
+          <DataSource  Id="psm1Frame5" />
+          <DataSource  Id="psm1Frame6" />
+          <DataSource  Id="psm1Frame7" />
           
-          <DataSource  Id="psm2Frame1ToBase" />
-          <DataSource  Id="psm2Frame2ToBase" />
-          <DataSource  Id="psm2Frame3ToBase" />
-          <DataSource  Id="psm2Frame4ToBase" />
-          <DataSource  Id="psm2Frame5ToBase" />
-          <DataSource  Id="psm2Frame6ToBase" />
-          <DataSource  Id="psm2Frame7ToBase" />
+          <!--<DataSource  Id="psm2Frame1" />
+          <DataSource  Id="psm2Frame2" />
+          <DataSource  Id="psm2Frame3" />
+          <DataSource  Id="psm2Frame4" />
+          <DataSource  Id="psm2Frame5" />
+          <DataSource  Id="psm2Frame6" />
+          <DataSource  Id="psm2Frame7" />
           
-          <DataSource  Id="ecmFrame1ToBase" />
-          <DataSource  Id="ecmFrame2ToBase" />
-          <DataSource  Id="ecmFrame3ToBase" />
-          <DataSource  Id="ecmFrame4ToBase" />
-          <DataSource  Id="ecmFrame5ToBase" />
-          <DataSource  Id="ecmFrame6ToBase" />
-          <DataSource  Id="ecmFrame7ToBase" />
+          <DataSource  Id="ecmFrame1" />
+          <DataSource  Id="ecmFrame2" />
+          <DataSource  Id="ecmFrame3" />
+          <DataSource  Id="ecmFrame4" />
+          <DataSource  Id="ecmFrame5" />
+          <DataSource  Id="ecmFrame6" />
+          <DataSource  Id="ecmFrame7" />-->
         </OutputChannel>
       </OutputChannels>
     </Device>
@@ -120,33 +120,33 @@
         <Message Type="TRANSFORM" />
       </MessageTypes>
       <TransformNames>
-        <Transform Name="psm1BaseToWorld" />
-        <Transform Name="psm2BaseToWorld" />
-        <Transform Name="ecmBaseToWorld" />
+        <Transform Name="psm1BaseToRef" />
+        <Transform Name="psm2BaseToRef" />
+        <Transform Name="ecmBaseToRef" />
         
-        <Transform Name="psm1Frame1ToBase" />
-        <Transform Name="psm1Frame2ToBase" />
-        <Transform Name="psm1Frame3ToBase" />
-        <Transform Name="psm1Frame4ToBase" />
-        <Transform Name="psm1Frame5ToBase" />
-        <Transform Name="psm1Frame6ToBase" />
-        <Transform Name="psm1Frame7ToBase" />
+        <Transform Name="psm1Frame1ToRef" />
+        <Transform Name="psm1Frame2ToRef" />
+        <Transform Name="psm1Frame3ToRef" />
+        <Transform Name="psm1Frame4ToRef" />
+        <Transform Name="psm1Frame5ToRef" />
+        <Transform Name="psm1Frame6ToRef" />
+        <Transform Name="psm1Frame7ToRef" />
         
-        <Transform Name="psm2Frame1ToBase" />
-        <Transform Name="psm2Frame2ToBase" />
-        <Transform Name="psm2Frame3ToBase" />
-        <Transform Name="psm2Frame4ToBase" />
-        <Transform Name="psm2Frame5ToBase" />
-        <Transform Name="psm2Frame6ToBase" />
-        <Transform Name="psm2Frame7ToBase" />
+        <!--<Transform Name="psm2Frame1ToRef" />
+        <Transform Name="psm2Frame2ToRef" />
+        <Transform Name="psm2Frame3ToRef" />
+        <Transform Name="psm2Frame4ToRef" />
+        <Transform Name="psm2Frame5ToRef" />
+        <Transform Name="psm2Frame6ToRef" />
+        <Transform Name="psm2Frame7ToRef" />
         
-        <Transform Name="ecmFrame1ToBase" />
-        <Transform Name="ecmFrame2ToBase" />
-        <Transform Name="ecmFrame3ToBase" />
-        <Transform Name="ecmFrame4ToBase" />
-        <Transform Name="ecmFrame5ToBase" />
-        <Transform Name="ecmFrame6ToBase" />
-        <Transform Name="ecmFrame7ToBase" />
+        <Transform Name="ecmFrame1ToRef" />
+        <Transform Name="ecmFrame2ToRef" />
+        <Transform Name="ecmFrame3ToRef" />
+        <Transform Name="ecmFrame4ToRef" />
+        <Transform Name="ecmFrame5ToRef" />
+        <Transform Name="ecmFrame6ToRef" />
+        <Transform Name="ecmFrame7ToRef" />-->
       </TransformNames>
     </DefaultClientInfo>
   </PlusOpenIGTLinkServer>
