@@ -48,7 +48,7 @@
         <DataSource Type="Tool" Id="psm1Frame6" PortName="psm1Frame6"/>
         <DataSource Type="Tool" Id="psm1Frame7" PortName="psm1Frame7"/>
         
-        <!--<DataSource Type="Tool" Id="psm2Frame1ToBase" PortName="psm2Frame1ToBase"/>
+        <DataSource Type="Tool" Id="psm2Frame1" PortName="psm2Frame1"/>
         <DataSource Type="Tool" Id="psm2Frame2" PortName="psm2Frame2"/>
         <DataSource Type="Tool" Id="psm2Frame3" PortName="psm2Frame3"/>
         <DataSource Type="Tool" Id="psm2Frame4" PortName="psm2Frame4"/>
@@ -62,7 +62,7 @@
         <DataSource Type="Tool" Id="ecmFrame4" PortName="ecmFrame4"/>
         <DataSource Type="Tool" Id="ecmFrame5" PortName="ecmFrame5"/>
         <DataSource Type="Tool" Id="ecmFrame6" PortName="ecmFrame6"/>
-        <DataSource Type="Tool" Id="ecmFrame7" PortName="ecmFrame7"/>-->
+        <DataSource Type="Tool" Id="ecmFrame7" PortName="ecmFrame7"/>
       </DataSources>
       
       <OutputChannels>
@@ -79,7 +79,7 @@
           <DataSource  Id="psm1Frame6" />
           <DataSource  Id="psm1Frame7" />
           
-          <!--<DataSource  Id="psm2Frame1" />
+          <DataSource  Id="psm2Frame1" />
           <DataSource  Id="psm2Frame2" />
           <DataSource  Id="psm2Frame3" />
           <DataSource  Id="psm2Frame4" />
@@ -93,7 +93,7 @@
           <DataSource  Id="ecmFrame4" />
           <DataSource  Id="ecmFrame5" />
           <DataSource  Id="ecmFrame6" />
-          <DataSource  Id="ecmFrame7" />-->
+          <DataSource  Id="ecmFrame7" />
         </OutputChannel>
       </OutputChannels>
     </Device>
@@ -132,7 +132,7 @@
         <Transform Name="psm1Frame6ToRef" />
         <Transform Name="psm1Frame7ToRef" />
         
-        <!--<Transform Name="psm2Frame1ToRef" />
+        <Transform Name="psm2Frame1ToRef" />
         <Transform Name="psm2Frame2ToRef" />
         <Transform Name="psm2Frame3ToRef" />
         <Transform Name="psm2Frame4ToRef" />
@@ -146,7 +146,7 @@
         <Transform Name="ecmFrame4ToRef" />
         <Transform Name="ecmFrame5ToRef" />
         <Transform Name="ecmFrame6ToRef" />
-        <Transform Name="ecmFrame7ToRef" />-->
+        <Transform Name="ecmFrame7ToRef" />
       </TransformNames>
     </DefaultClientInfo>
   </PlusOpenIGTLinkServer>
