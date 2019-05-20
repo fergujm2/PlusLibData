@@ -8,8 +8,9 @@
       Id="TrackerDevice"
       Type="IntuitiveDaVinci"
       ToolReferenceFrame="Ref"
-      AcquisitionRate="60"
+      AcquisitionRate="50"
       DebugSineWaveMode="true"
+      UpdateMinimalKinematics="true"
       Psm1DhTable="
         1.0   0.0     1.0   0.0  0.0       1.0   0.0 
         1.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
