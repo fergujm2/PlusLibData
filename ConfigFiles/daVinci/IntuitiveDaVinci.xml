@@ -8,9 +8,9 @@
       Id="TrackerDevice"
       Type="IntuitiveDaVinci"
       ToolReferenceFrame="Ref"
-      AcquisitionRate="50"
-      DebugSineWaveMode="false"
-      UpdateMinimalKinematics="true"
+      AcquisitionRate="60"
+      DebugSineWaveMode="true"
+      UpdateMinimalKinematics="false" 
       Psm1DhTable="
         1.0   0.0     1.0   0.0  0.0       1.0   0.0 
         1.0   0.0     -1.0  0.0  0.0       -1.0  0.0 
@@ -38,64 +38,74 @@
       Password="">
       
       <DataSources>
+        <!-- The following are the minimal transforms -->
         <DataSource Type="Tool" Id="psm1Base" PortName="psm1Base"/>
         <DataSource Type="Tool" Id="psm2Base" PortName="psm2Base"/>
         <DataSource Type="Tool" Id="ecmBase" PortName="ecmBase"/>
         
-        <DataSource Type="Tool" Id="psm1Frame1" PortName="psm1Frame1"/>
-        <DataSource Type="Tool" Id="psm1Frame2" PortName="psm1Frame2"/>
-        <DataSource Type="Tool" Id="psm1Frame3" PortName="psm1Frame3"/>
         <DataSource Type="Tool" Id="psm1Frame4" PortName="psm1Frame4"/>
         <DataSource Type="Tool" Id="psm1Frame5" PortName="psm1Frame5"/>
         <DataSource Type="Tool" Id="psm1Frame6" PortName="psm1Frame6"/>
         <DataSource Type="Tool" Id="psm1Frame7" PortName="psm1Frame7"/>
         
-        <DataSource Type="Tool" Id="psm2Frame1" PortName="psm2Frame1"/>
-        <DataSource Type="Tool" Id="psm2Frame2" PortName="psm2Frame2"/>
-        <DataSource Type="Tool" Id="psm2Frame3" PortName="psm2Frame3"/>
         <DataSource Type="Tool" Id="psm2Frame4" PortName="psm2Frame4"/>
         <DataSource Type="Tool" Id="psm2Frame5" PortName="psm2Frame5"/>
         <DataSource Type="Tool" Id="psm2Frame6" PortName="psm2Frame6"/>
         <DataSource Type="Tool" Id="psm2Frame7" PortName="psm2Frame7"/>
+        
+        <DataSource Type="Tool" Id="ecmFrame7" PortName="ecmFrame7"/>
+        
+        <!-- The following are the extra transforms.  Uncomment if UpdateMinimalKinematics = false.  --> <!--
+        <DataSource Type="Tool" Id="psm1Frame1" PortName="psm1Frame1"/>
+        <DataSource Type="Tool" Id="psm1Frame2" PortName="psm1Frame2"/>
+        <DataSource Type="Tool" Id="psm1Frame3" PortName="psm1Frame3"/>
+        
+        <DataSource Type="Tool" Id="psm2Frame1" PortName="psm2Frame1"/>
+        <DataSource Type="Tool" Id="psm2Frame2" PortName="psm2Frame2"/>
+        <DataSource Type="Tool" Id="psm2Frame3" PortName="psm2Frame3"/>
         
         <DataSource Type="Tool" Id="ecmFrame1" PortName="ecmFrame1"/>
         <DataSource Type="Tool" Id="ecmFrame2" PortName="ecmFrame2"/>
         <DataSource Type="Tool" Id="ecmFrame3" PortName="ecmFrame3"/>
         <DataSource Type="Tool" Id="ecmFrame4" PortName="ecmFrame4"/>
         <DataSource Type="Tool" Id="ecmFrame5" PortName="ecmFrame5"/>
-        <DataSource Type="Tool" Id="ecmFrame6" PortName="ecmFrame6"/>
-        <DataSource Type="Tool" Id="ecmFrame7" PortName="ecmFrame7"/>
+        <DataSource Type="Tool" Id="ecmFrame6" PortName="ecmFrame6"/> -->
       </DataSources>
       
       <OutputChannels>
         <OutputChannel Id="TrackerStream" >
+          <!-- Minimal Transforms -->
           <DataSource  Id="psm1Base" />
           <DataSource  Id="psm2Base" />
           <DataSource  Id="ecmBase" />
           
-          <DataSource  Id="psm1Frame1" />
-          <DataSource  Id="psm1Frame2" />
-          <DataSource  Id="psm1Frame3" />
           <DataSource  Id="psm1Frame4" />
           <DataSource  Id="psm1Frame5" />
           <DataSource  Id="psm1Frame6" />
           <DataSource  Id="psm1Frame7" />
           
-          <DataSource  Id="psm2Frame1" />
-          <DataSource  Id="psm2Frame2" />
-          <DataSource  Id="psm2Frame3" />
           <DataSource  Id="psm2Frame4" />
           <DataSource  Id="psm2Frame5" />
           <DataSource  Id="psm2Frame6" />
           <DataSource  Id="psm2Frame7" />
+          
+          <DataSource  Id="ecmFrame7" />
+          
+          <!-- Extra transforms. Uncomment if UpdateMinimalKinematics = false. --> <!--
+          <DataSource  Id="psm1Frame1" />
+          <DataSource  Id="psm1Frame2" />
+          <DataSource  Id="psm1Frame3" />
+          
+          <DataSource  Id="psm2Frame1" />
+          <DataSource  Id="psm2Frame2" />
+          <DataSource  Id="psm2Frame3" />
           
           <DataSource  Id="ecmFrame1" />
           <DataSource  Id="ecmFrame2" />
           <DataSource  Id="ecmFrame3" />
           <DataSource  Id="ecmFrame4" />
           <DataSource  Id="ecmFrame5" />
-          <DataSource  Id="ecmFrame6" />
-          <DataSource  Id="ecmFrame7" />
+          <DataSource  Id="ecmFrame6" /> -->
         </OutputChannel>
       </OutputChannels>
     </Device>
@@ -122,33 +132,40 @@
         <Message Type="TRANSFORM" />
       </MessageTypes>
       <TransformNames>
+        <!-- Minimal Transforms --> 
         <Transform Name="psm1BaseToRef" />
         <Transform Name="psm2BaseToRef" />
         <Transform Name="ecmBaseToRef" />
         
-        <Transform Name="psm1Frame1ToRef" />
-        <Transform Name="psm1Frame2ToRef" />
-        <Transform Name="psm1Frame3ToRef" />
+        
         <Transform Name="psm1Frame4ToRef" />
         <Transform Name="psm1Frame5ToRef" />
         <Transform Name="psm1Frame6ToRef" />
         <Transform Name="psm1Frame7ToRef" />
         
-        <Transform Name="psm2Frame1ToRef" />
-        <Transform Name="psm2Frame2ToRef" />
-        <Transform Name="psm2Frame3ToRef" />
+        
         <Transform Name="psm2Frame4ToRef" />
         <Transform Name="psm2Frame5ToRef" />
         <Transform Name="psm2Frame6ToRef" />
         <Transform Name="psm2Frame7ToRef" />
+        
+        <Transform Name="ecmFrame7ToRef" />
+        
+        <!-- Extra transforms. Uncomment if UpdateMinimalKinematics = false. --> <!--
+        <Transform Name="psm1Frame1ToRef" />
+        <Transform Name="psm1Frame2ToRef" />
+        <Transform Name="psm1Frame3ToRef" />
+        
+        <Transform Name="psm2Frame1ToRef" />
+        <Transform Name="psm2Frame2ToRef" />
+        <Transform Name="psm2Frame3ToRef" />
         
         <Transform Name="ecmFrame1ToRef" />
         <Transform Name="ecmFrame2ToRef" />
         <Transform Name="ecmFrame3ToRef" />
         <Transform Name="ecmFrame4ToRef" />
         <Transform Name="ecmFrame5ToRef" />
-        <Transform Name="ecmFrame6ToRef" />
-        <Transform Name="ecmFrame7ToRef" />
+        <Transform Name="ecmFrame6ToRef" /> -->
       </TransformNames>
     </DefaultClientInfo>
   </PlusOpenIGTLinkServer>
